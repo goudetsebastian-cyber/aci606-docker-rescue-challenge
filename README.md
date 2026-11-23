@@ -34,10 +34,18 @@ docker compose logs --tail=100
 
 Espera a que `frontend`, `backend` y `db` indiquen estado `healthy`. La API se consume a través de Nginx:
 
-```bash
+```powershell
 curl.exe -i http://localhost:8080/api/health
 curl.exe -i http://localhost:8080/api/items
 curl.exe -X POST http://localhost:8080/api/items -H "Content-Type: application/json" -d '{"name":"registro-demo"}'
+```
+
+En Linux/macOS/Codespaces:
+
+```bash
+curl -i http://localhost:8080/api/health
+curl -i http://localhost:8080/api/items
+curl -X POST http://localhost:8080/api/items -H "Content-Type: application/json" -d '{"name":"registro-demo"}'
 ```
 
 La respuesta de salud esperada es HTTP 200 con `{"status":"ok","database":"reachable"}`.
@@ -49,8 +57,10 @@ Crea un registro y guarda su respuesta. Luego recrea los contenedores sin borrar
 ```bash
 docker compose down
 docker compose up --build -d
-curl.exe http://localhost:8080/api/items
+curl http://localhost:8080/api/items
 ```
+
+En Windows PowerShell, usa `curl.exe` en lugar de `curl` para consultar la respuesta.
 
 El registro debe seguir presente porque PostgreSQL utiliza el volumen nombrado `postgres_data`. `docker compose down -v` elimina ese volumen y todos sus datos; úsalo solo para reiniciar intencionalmente el estado local.
 
@@ -60,14 +70,16 @@ Detén el backend. La ruta de salud a través de Nginx debe fallar mientras la A
 
 ```bash
 docker compose stop backend
-curl.exe -i http://localhost:8080/api/health
+curl -i http://localhost:8080/api/health
 docker compose logs --tail=50 backend frontend
 docker compose start backend
 docker compose ps
-curl.exe -i http://localhost:8080/api/health
+curl -i http://localhost:8080/api/health
 ```
 
 Espera a que el backend figure `healthy` antes de considerar recuperado el servicio.
+
+En Windows PowerShell, usa `curl.exe` en lugar de `curl` para esas solicitudes.
 
 ## Diagnóstico útil
 
@@ -103,4 +115,15 @@ Para una limpieza completa del entorno de práctica, incluida la base de datos, 
 
 ## Informe técnico
 
-El informe y el diagrama entregables se encuentran en [`docs/`](docs/). El informe diferencia las verificaciones estáticas realizadas de las pruebas dinámicas pendientes cuando no hay un motor Docker disponible.
+El [informe técnico en PDF](docs/Informe_Tecnico_ACI606_Docker_Rescue.pdf), su [fuente Markdown](docs/Informe_Tecnico_ACI606_Docker_Rescue.md), el [diagrama](docs/arquitectura.svg) y el [registro de validación estática](docs/evidencia/validacion_estatica.txt) están en `docs/`. El informe diferencia las verificaciones estáticas realizadas de las pruebas dinámicas pendientes cuando no hay un motor Docker disponible.
+
+## Repositorio GitHub
+
+El proyecto tiene un historial Git local en la rama `main`, pero todavía no se configuró un remoto GitHub. Después de crear un repositorio vacío, conecta su URL y publica el historial:
+
+```bash
+git remote add origin <URL_DEL_REPOSITORIO>
+git push -u origin main
+```
+
+Reemplaza esta nota por el enlace directo antes de entregar y comparte el repositorio con el docente si su visibilidad es privada.

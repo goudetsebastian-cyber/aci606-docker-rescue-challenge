@@ -1,0 +1,34 @@
+ACI606 Docker Rescue - Registro de validación estática
+Fecha: 23-11-2026 (America/Santiago)
+
+Proyecto:
+  D:/ACI606_Docker_Rescue_Starter_Estudiantes/docker_rescue_student
+
+COMPROBACIONES EJECUTADAS
+
+1. Parseo YAML y estructura de Compose
+   Herramienta: PyYAML 6.0.4 (safe_load), con aserciones sobre servicios,
+   publicación frontend 8080:80, dependencias service_healthy, volumen
+   postgres_data y healthcheck en los tres servicios.
+   Resultado: PASS
+   Salida resumida: YAML parse: PASS; services, ports, dependencies, volume
+   and healthchecks: PASS
+
+2. Sintaxis Python
+   Comando: python -m py_compile backend/main.py
+   Resultado: PASS
+
+3. Sintaxis JavaScript
+   Comando: node --check sobre el contenido de <script> de frontend/index.html
+   Resultado: PASS
+
+LÍMITE DE LA SESIÓN
+
+- docker --version no fue reconocido por PowerShell.
+- Docker Desktop no se encontró en sus ubicaciones habituales.
+- No se ejecutaron docker compose config, build, up, ps, logs ni pruebas HTTP.
+- Por lo tanto, la comunicación en runtime, persistencia, fallo controlado y
+  recuperación permanecen pendientes de una ejecución real con Docker.
+
+Estas comprobaciones estáticas no equivalen a una prueba de integración ni a
+una verificación de Compose por su motor.
