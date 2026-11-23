@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura final - ACI606 Docker Rescue</title>
+  <desc id="desc">Navegador llega al frontend Nginx en el puerto 8080, Nginx enruta /api al backend FastAPI y este conecta a PostgreSQL. PostgreSQL guarda sus datos en un volumen Docker nombrado.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#315f8c"/></marker>
+    <style>
+      .bg{fill:#f5f8fc}.box{fill:#fff;stroke:#35648f;stroke-width:2;rx:18}.db{fill:#fff7ed;stroke:#b56722;stroke-width:2;rx:18}.vol{fill:#edf8f2;stroke:#3f805c;stroke-width:2;rx:15}.line{stroke:#315f8c;stroke-width:3;fill:none;marker-end:url(#arrow)}.title{font:700 25px Arial,sans-serif;fill:#17324d}.head{font:700 19px Arial,sans-serif;fill:#17324d}.txt{font:15px Arial,sans-serif;fill:#425466}.small{font:13px Arial,sans-serif;fill:#586b7c}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="430" rx="18"/>
+  <text x="42" y="48" class="title">Arquitectura final · Docker Compose</text>
+  <rect x="42" y="150" width="205" height="126" class="box"/>
+  <text x="68" y="190" class="head">Navegador</text>
+  <text x="68" y="221" class="txt">http://localhost:8080</text>
+  <text x="68" y="246" class="small">tráfico HTTP del usuario</text>
+  <rect x="350" y="125" width="260" height="176" class="box"/>
+  <text x="382" y="166" class="head">frontend · Nginx</text>
+  <text x="382" y="198" class="txt">Host :8080 → contenedor :80</text>
+  <text x="382" y="226" class="txt">/api/* → backend:8000</text>
+  <text x="382" y="262" class="small">servicio publicado</text>
+  <rect x="715" y="125" width="230" height="176" class="box"/>
+  <text x="746" y="166" class="head">backend · FastAPI</text>
+  <text x="746" y="198" class="txt">Puerto interno :8000</text>
+  <text x="746" y="226" class="txt">DATABASE_URL externa</text>
+  <text x="746" y="262" class="small">healthcheck consulta DB</text>
+  <rect x="1012" y="111" width="150" height="148" class="db"/>
+  <text x="1035" y="151" class="head">db ·</text>
+  <text x="1035" y="178" class="head">PostgreSQL</text>
+  <text x="1035" y="211" class="txt">:5432</text>
+  <text x="1035" y="237" class="small">healthcheck</text>
+  <rect x="989" y="311" width="198" height="72" class="vol"/>
+  <text x="1014" y="342" class="head">postgres_data</text>
+  <text x="1014" y="365" class="small">volumen nombrado</text>
+  <path d="M247 213 H338" class="line"/>
+  <text x="256" y="196" class="small">HTTP</text>
+  <path d="M610 213 H703" class="line"/>
+  <text x="625" y="196" class="small">red Compose · DNS backend</text>
+  <path d="M945 213 H1000" class="line"/>
+  <text x="946" y="193" class="small">db:5432</text>
+  <path d="M1087 259 V300" class="line"/>
+  <text x="1098" y="289" class="small">datos</text>
+  <text x="42" y="352" class="small">Solo el frontend publica puerto al host; backend y base de datos se comunican por la red interna de Compose.</text>
+</svg>
