@@ -2,10 +2,10 @@
 
 ## Evaluación 2 · Docker Rescue Challenge
 
-**Integrantes:** pendiente de completar  
-**Sección:** pendiente de completar  
-**Fecha:** 23 de noviembre de 2026  
-**Estado de entrega:** reparación y validación estática preparadas; ejecución Docker y publicación GitHub pendientes de completar en un entorno autenticado con Docker.
+- **Integrante único:** Sebastián Goudet (@goudetsebastian-cyber)
+- **Sección:** no especificada en los antecedentes recibidos
+- **Fecha:** 24 de noviembre de 2026
+- **Estado de entrega:** reparación y validación estática listas. Para cerrar la entrega faltan las pruebas dinámicas en Docker y la publicación del repositorio GitHub; la sección formal tampoco figura en los antecedentes recibidos.
 
 ---
 
@@ -148,9 +148,11 @@ Se corrigieron seis incidencias a partir de inconsistencias verificables en los 
 
 La limitación principal es de entorno: en esta sesión no hay Docker CLI ni Engine. Por lo mismo, no se presenta una falsa evidencia de build, tráfico, persistencia o recuperación. Antes de entregar, falta ejecutar la matriz dinámica en Docker o Codespaces y adjuntar su salida real.
 
-**Repositorio GitHub:** pendiente de publicar. La cuenta conectada no ofreció una acción de creación de repositorio y la sesión web solicitó iniciar sesión. El proyecto está preparado en Git local con la rama `main`; no se incluye un enlace inventado.
+**Repositorio GitHub:** pendiente de creación y publicación. El conector permite revisar los repositorios existentes, pero no crear uno nuevo; la sesión web solicitó iniciar sesión. El proyecto está preparado en Git local con la rama `main`; no se incluye un enlace inventado.
 
-**Campos que debe completar el equipo antes de entregar:** integrantes y sección. Una vez autenticada la sesión y creado el repositorio, añadir su URL al README y a esta sección, publicar la rama `main` y conceder acceso al docente si el repositorio es privado.
+**Datos académicos:** integrante único Sebastián Goudet, identificado por la cuenta `@goudetsebastian-cyber`. La documentación recibida no especifica una sección formal.
+
+**Antes de entregar:** ejecutar las pruebas dinámicas, publicar la rama `main`, incorporar el enlace real en el README y en esta sección, e invitar al docente si el repositorio queda privado.
 
 ### Fuentes
 

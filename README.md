@@ -2,6 +2,9 @@
 
 Aplicación web multi-servicio recuperada sobre el starter entregado para la Evaluación 2 de ACI606. La solución conserva sus tres componentes: frontend Nginx, API FastAPI y PostgreSQL.
 
+- **Asignatura:** ACI606 — Especialidad II.
+- **Integrante único:** Sebastián Goudet (`@goudetsebastian-cyber`).
+
 ![Arquitectura de la solución](docs/arquitectura.svg)
 
 ## Requisitos
