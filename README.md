@@ -4,6 +4,7 @@ Aplicación web multi-servicio recuperada sobre el starter entregado para la Eva
 
 - **Asignatura:** ACI606 — Especialidad II.
 - **Integrante único:** Sebastián Goudet (`@goudetsebastian-cyber`).
+- **Repositorio de entrega:** [ACI606 Docker Rescue Challenge](https://github.com/goudetsebastian-cyber/aci606-docker-rescue-challenge) (público).
 
 ![Arquitectura de la solución](docs/arquitectura.svg)
 
