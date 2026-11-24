@@ -123,11 +123,4 @@ El [informe técnico en PDF](docs/Informe_Tecnico_ACI606_Docker_Rescue.pdf), su 
 
 ## Repositorio GitHub
 
-El proyecto tiene un historial Git local en la rama `main`, pero todavía no se configuró un remoto GitHub. Después de crear un repositorio vacío, conecta su URL y publica el historial:
-
-```bash
-git remote add origin <URL_DEL_REPOSITORIO>
-git push -u origin main
-```
-
-Reemplaza esta nota por el enlace directo antes de entregar y comparte el repositorio con el docente si su visibilidad es privada.
+El repositorio público de entrega es [ACI606 Docker Rescue Challenge](https://github.com/goudetsebastian-cyber/aci606-docker-rescue-challenge). La rama `main` conserva el historial descriptivo de diagnóstico, reparación y mejoras.
