@@ -148,7 +148,7 @@ Se corrigieron seis incidencias a partir de inconsistencias verificables en los 
 
 La limitación principal es de entorno: en esta sesión no hay Docker CLI ni Engine. Por lo mismo, no se presenta una falsa evidencia de build, tráfico, persistencia o recuperación. Antes de entregar, falta ejecutar la matriz dinámica en Docker o Codespaces y adjuntar su salida real.
 
-**Repositorio GitHub:** [ACI606 Docker Rescue Challenge](https://github.com/goudetsebastian-cyber/aci606-docker-rescue-challenge). El repositorio es público y la rama `main` contiene seis commits descriptivos.
+**Repositorio GitHub:** [ACI606 Docker Rescue Challenge](https://github.com/goudetsebastian-cyber/aci606-docker-rescue-challenge). El repositorio es público y la rama `main` conserva un historial de cambios descriptivo.
 
 **Datos académicos:** integrante único Sebastián Goudet, identificado por la cuenta `@goudetsebastian-cyber`. La documentación recibida no especifica una sección formal.
 
